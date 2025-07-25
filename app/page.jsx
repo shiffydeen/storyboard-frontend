@@ -36,7 +36,7 @@ export default function Home() {
                   <p className="font-semibold text-sm">{project.title}</p>
                   <p className="text-xs">Genre: {project.genre}</p>
                 </div>
-                <div className="flex flex-wrap items-center mb-5">
+                <div className="flex flex-wrap items-center justify-center mb-5">
                   <button className="px-2 py-1 bg-neutral-300 rounded-sm m-1 hover:bg-gray-400 text-sm shrink-0"><FaShareAlt /></button>
                   <button className="px-2 py-1 bg-neutral-300 rounded-sm m-1 hover:bg-gray-400 text-sm shrink-0"><IoSettings /></button>
                   <button className="px-2 py-1 bg-neutral-300 rounded-sm m-1 hover:bg-gray-400 text-sm shrink-0"><MdDeleteForever /></button>
