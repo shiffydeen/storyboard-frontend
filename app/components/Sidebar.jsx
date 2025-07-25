@@ -14,12 +14,12 @@ export default function Sidebar() {
     <>
       <aside
         className={`
-          fixed md:static top-0 left-0 min-h-screen w-64 bg-white shadow-md z-40 p-6
+          fixed md:static top-0 left-0 min-h-screen w-52 bg-white shadow-md z-40 p-6
            ease-in-out dark:bg-gray-900 md:translate-x-0
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full '}
         `}
       >
-        <h2 className="text-xl font-bold mb-6">Sidebar</h2>
+        <h2 className="text-xl font-bold mb-6">LOGO</h2>
         <button className='absolute top-6 right-4 md:hidden' onClick={closeSidebar}>
           <FaTimes />
         </button>

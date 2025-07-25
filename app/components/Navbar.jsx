@@ -39,15 +39,8 @@ const Navbar = () => {
       </div>
       <div className='flex items-center gap-5'>
         <span className="hover:bg-neutral-500 p-2 rounded-md cursor-pointer">
-
           <ThemeSwitch />
         </span>
-        {/* <button className="cursor-pointer">
-            <MdOutlineLightMode className='w-10 h-10'/>
-        </button> */}
-        {/* <span>
-            <MdOutlineModeNight />
-        </span> */}
         <span className="p-2 hover:bg-neutral-500 rounded-md cursor-pointer">
           <RiSettings5Line className="w-8 h-8"/>
           {/* <CiSettings className='w-10 h-10'/> */}
