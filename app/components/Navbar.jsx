@@ -21,11 +21,11 @@ const Navbar = () => {
 
 
   return (
-    <nav className='p-2 md:p-2 flex justify-between border-b-2 border-neutral-400'>
+    <nav className='p-2 md:p-2 flex justify-between border-b border-neutral-400'>
       <div className='flex items-center gap-4'>
         <button
           onClick={toggleSidebar}
-          className="md:hidden  dark:text-gray-200 text-xl hover:bg-neutral-500 p-2 rounded-md"
+          className="md:hidden  dark:text-gray-200 text-xl dark:hover:bg-neutral-500 hover:bg-neutral-300 p-2 rounded-md"
         >
           <FaBars className="h-8 w-8"/> 
           </button>
@@ -37,11 +37,11 @@ const Navbar = () => {
           <p>{meta.description}</p>
         </div>
       </div>
-      <div className='flex items-center gap-5'>
-        <span className="hover:bg-neutral-500 p-2 rounded-md cursor-pointer">
+      <div className='flex items-center gap-3'>
+        <span className="hover:bg-neutral-300 dark:hover:bg-neutral-500 p-2 rounded-md cursor-pointer">
           <ThemeSwitch />
         </span>
-        <span className="p-2 hover:bg-neutral-500 rounded-md cursor-pointer">
+        <span className="p-2 hover:bg-neutral-300 dark:hover:bg-neutral-500 rounded-md cursor-pointer">
           <RiSettings5Line className="w-8 h-8"/>
           {/* <CiSettings className='w-10 h-10'/> */}
         </span>
