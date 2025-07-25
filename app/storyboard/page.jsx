@@ -9,7 +9,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <div className='grid grid-cols-3 gap-3 mt-3  transition-all'>
+    <div className='grid grid-cols-2 md:grid-cols-3 gap-3 mt-3  transition-all'>
         
       <div className='shadow-2xl border border-neutral-400  rounded-sm justify-self-center'>
         <div className='w-full'>
