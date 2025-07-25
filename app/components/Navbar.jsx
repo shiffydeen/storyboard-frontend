@@ -3,7 +3,7 @@
 import { FaBars, FaRegPlayCircle } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineModeNight } from "react-icons/md";
-import { CiSettings } from "react-icons/ci";
+import { RiSettings5Line } from "react-icons/ri";
 import { usePathname } from 'next/navigation';
 import { pageTitles } from '../lib/pageTitles';
 import ThemeSwitch from "./ThemeSwitch";
@@ -21,13 +21,13 @@ const Navbar = () => {
 
 
   return (
-    <nav className='p-1 md:p-2 flex justify-between border-b-2 border-neutral-400'>
+    <nav className='p-2 md:p-2 flex justify-between border-b-2 border-neutral-400'>
       <div className='flex items-center gap-4'>
         <button
           onClick={toggleSidebar}
-          className="md:hidden  dark:text-gray-200 text-xl"
+          className="md:hidden  dark:text-gray-200 text-xl hover:bg-neutral-500 p-2 rounded-md"
         >
-          <FaBars /> 
+          <FaBars className="h-8 w-8"/> 
           </button>
         <span>
             <FaRegPlayCircle className='w-16 h-16'/>
@@ -38,15 +38,19 @@ const Navbar = () => {
         </div>
       </div>
       <div className='flex items-center gap-5'>
-        <ThemeSwitch />
+        <span className="hover:bg-neutral-500 p-2 rounded-md cursor-pointer">
+
+          <ThemeSwitch />
+        </span>
         {/* <button className="cursor-pointer">
             <MdOutlineLightMode className='w-10 h-10'/>
         </button> */}
         {/* <span>
             <MdOutlineModeNight />
         </span> */}
-        <span>
-          <CiSettings className='w-10 h-10'/>
+        <span className="p-2 hover:bg-neutral-500 rounded-md cursor-pointer">
+          <RiSettings5Line className="w-8 h-8"/>
+          {/* <CiSettings className='w-10 h-10'/> */}
         </span>
       </div>
     </nav>

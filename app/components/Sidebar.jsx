@@ -24,9 +24,9 @@ export default function Sidebar() {
           <FaTimes />
         </button>
         <nav className="space-y-2">
-          <Link href="/">My Projects</Link>
-          <Link href="/shotlist" className='block'>Shotlist</Link>
-          <Link href="/storyboard" className='block'>Storyboard</Link>
+          <Link href="/" className='hover:bg-neutral-500 hover:text-white block p-2'>My Projects</Link>
+          <Link href="/shotlist" className='hover:bg-neutral-500 hover:text-white block p-2'>Shotlist</Link>
+          <Link href="/storyboard" className='hover:bg-neutral-500 hover:text-white block p-2'>Storyboard</Link>
         </nav>
       </aside>
 
