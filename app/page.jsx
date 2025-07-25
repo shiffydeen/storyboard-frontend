@@ -3,7 +3,10 @@ import { pageTitles } from "./lib/pageTitles";
 import { projects } from "./mockData";
 import { FaShareAlt } from "react-icons/fa";
 import { IoSettings } from "react-icons/io5";
-import { MdDeleteForever } from "react-icons/md";
+import { MdDashboard, MdDeleteForever } from "react-icons/md";
+import { FaList } from "react-icons/fa";
+import { BsProjector } from "react-icons/bs";
+import { MdDescription } from "react-icons/md";
 
 
 export const metadata = {
@@ -33,17 +36,25 @@ export default function Home() {
                   <p className="font-semibold text-sm">{project.title}</p>
                   <p className="text-xs">Genre: {project.genre}</p>
                 </div>
-                <div className="flex flex-wrap items-center">
-                  <button className="px-2 py-1 bg-neutral-300 rounded-sm mx-1 hover:bg-gray-400 text-sm shrink-0"><FaShareAlt /></button>
-                  <button className="px-2 py-1 bg-neutral-300 rounded-sm mx-1 hover:bg-gray-400 text-sm shrink-0"><IoSettings /></button>
-                  <button className="px-2 py-1 bg-neutral-300 rounded-sm mx-1 hover:bg-gray-400 text-sm shrink-0"><MdDeleteForever /></button>
+                <div className="flex flex-wrap items-center mb-5">
+                  <button className="px-2 py-1 bg-neutral-300 rounded-sm m-1 hover:bg-gray-400 text-sm shrink-0"><FaShareAlt /></button>
+                  <button className="px-2 py-1 bg-neutral-300 rounded-sm m-1 hover:bg-gray-400 text-sm shrink-0"><IoSettings /></button>
+                  <button className="px-2 py-1 bg-neutral-300 rounded-sm m-1 hover:bg-gray-400 text-sm shrink-0"><MdDeleteForever /></button>
                 </div>
               </div>
-              <div>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
+              <div className="grid grid-cols-4 gap-[2px]">
+                <div className="p-1 bg-neutral-300 hover:bg-gray-400 text-sm flex justify-center items-center">
+                  <button><MdDescription /></button>
+                </div>
+                <div className="p-1 bg-neutral-300 hover:bg-gray-400 text-sm flex justify-center items-center">
+                  <button><FaList /></button>
+                </div>
+                <div className="p-1 bg-neutral-300 hover:bg-gray-400 text-sm flex justify-center items-center">
+                  <button><MdDashboard /></button>
+                </div>
+                <div className="p-1 bg-neutral-300 hover:bg-gray-400 text-sm flex justify-center items-center">
+                  <button><BsProjector /></button>
+                </div>
               </div>
             </div>
           ))
