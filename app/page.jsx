@@ -31,16 +31,17 @@ export default function Home() {
               <div>
                 <Image src={project.cover}/>
               </div>
-              <div className="flex justify-between p-2">
-                <div>
+              <div className=" p-2">
+                <div className="md:flex md:items-center justify-between">
                   <p className="font-semibold text-sm">{project.title}</p>
+                  <div className="flex flex-wrap gap-1 items-center md:justify-center my-1">
+                    <button className="px-2 py-1 bg-neutral-300 rounded-sm hover:bg-gray-400 text-sm shrink-0"><FaShareAlt /></button>
+                    <button className="px-2 py-1 bg-neutral-300 rounded-sm hover:bg-gray-400 text-sm shrink-0"><IoSettings /></button>
+                    <button className="px-2 py-1 bg-neutral-300 rounded-sm hover:bg-gray-400 text-sm shrink-0"><MdDeleteForever /></button>
+                  </div>
+                </div>
                   <p className="text-xs">Genre: {project.genre}</p>
-                </div>
-                <div className="flex flex-wrap items-center justify-center mb-5">
-                  <button className="px-2 py-1 bg-neutral-300 rounded-sm m-1 hover:bg-gray-400 text-sm shrink-0"><FaShareAlt /></button>
-                  <button className="px-2 py-1 bg-neutral-300 rounded-sm m-1 hover:bg-gray-400 text-sm shrink-0"><IoSettings /></button>
-                  <button className="px-2 py-1 bg-neutral-300 rounded-sm m-1 hover:bg-gray-400 text-sm shrink-0"><MdDeleteForever /></button>
-                </div>
+                
               </div>
               <div className="grid grid-cols-4 gap-[2px]">
                 <div className="p-1 bg-neutral-300 hover:bg-gray-400 text-sm flex justify-center items-center">
