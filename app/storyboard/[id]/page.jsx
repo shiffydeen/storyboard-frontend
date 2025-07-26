@@ -1,11 +1,11 @@
 import React from 'react'
-import { pageTitles } from '../lib/pageTitles'
+// import { pageTitles } from '../lib/pageTitles'
 import Image from 'next/image'
 
-export const metadata = {
-    title: pageTitles['/storyboard'].title,
-    description: pageTitles['/storyboard'].description
-}
+// export const metadata = {
+//     title: pageTitles['/storyboard'].title,
+//     description: pageTitles['/storyboard'].description
+// }
 
 const page = () => {
   return (

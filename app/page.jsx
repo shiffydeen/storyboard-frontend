@@ -7,6 +7,7 @@ import { MdDashboard, MdDeleteForever } from "react-icons/md";
 import { FaList } from "react-icons/fa";
 import { BsProjector } from "react-icons/bs";
 import { MdDescription } from "react-icons/md";
+import Link from "next/link";
 
 
 export const metadata = {
@@ -35,27 +36,27 @@ export default function Home() {
                 <div className="md:flex md:items-center justify-between">
                   <p className="font-semibold text-sm">{project.title}</p>
                   <div className="flex flex-wrap gap-1 items-center md:justify-center my-1">
-                    <button className="px-2 py-1 bg-neutral-300 rounded-sm hover:bg-gray-400 text-sm shrink-0"><FaShareAlt /></button>
-                    <button className="px-2 py-1 bg-neutral-300 rounded-sm hover:bg-gray-400 text-sm shrink-0"><IoSettings /></button>
-                    <button className="px-2 py-1 bg-neutral-300 rounded-sm hover:bg-gray-400 text-sm shrink-0"><MdDeleteForever /></button>
+                    <button className="px-2 py-1 bg-neutral-300 dark:bg-neutral-700 rounded-sm hover:bg-gray-400 dark:hover:bg-neutral-400 text-sm shrink-0"><FaShareAlt /></button>
+                    <button className="px-2 py-1 bg-neutral-300 dark:bg-neutral-700 rounded-sm hover:bg-gray-400 dark:hover:bg-neutral-400 text-sm shrink-0"><IoSettings /></button>
+                    <button className="px-2 py-1 bg-neutral-300 dark:bg-neutral-700 rounded-sm hover:bg-gray-400 dark:hover:bg-neutral-400 text-sm shrink-0"><MdDeleteForever /></button>
                   </div>
                 </div>
                   <p className="text-xs">Genre: {project.genre}</p>
                 
               </div>
               <div className="grid grid-cols-4 gap-[2px]">
-                <div className="p-1 bg-neutral-300 hover:bg-gray-400 text-sm flex justify-center items-center">
-                  <button><MdDescription /></button>
-                </div>
-                <div className="p-1 bg-neutral-300 hover:bg-gray-400 text-sm flex justify-center items-center">
-                  <button><FaList /></button>
-                </div>
-                <div className="p-1 bg-neutral-300 hover:bg-gray-400 text-sm flex justify-center items-center">
-                  <button><MdDashboard /></button>
-                </div>
-                <div className="p-1 bg-neutral-300 hover:bg-gray-400 text-sm flex justify-center items-center">
-                  <button><BsProjector /></button>
-                </div>
+                <Link href={`/screenplay/${project.id}`} className="p-1 bg-neutral-300 dark:bg-neutral-700 hover:bg-gray-400 dark:hover:bg-neutral-400 text-sm flex justify-center items-center">
+                  <MdDescription />
+                </Link>
+                <Link href={`/shotlist/${project.id}`} className="p-1 bg-neutral-300 dark:bg-neutral-700 hover:bg-gray-400 dark:hover:bg-neutral-400 text-sm flex justify-center items-center">
+                  <FaList />
+                </Link>
+                <Link href={`/storyboard/${project.id}`} className="p-1 bg-neutral-300 dark:bg-neutral-700 hover:bg-gray-400 dark:hover:bg-neutral-400 text-sm flex justify-center items-center">
+                  <MdDashboard />
+                </Link>
+                <Link href={`/animatic/${project.id}`} className="p-1 bg-neutral-300 dark:bg-neutral-700 hover:bg-gray-400 dark:hover:bg-neutral-400 text-sm flex justify-center items-center">
+                  <BsProjector />
+                </Link>
               </div>
             </div>
           ))

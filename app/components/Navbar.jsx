@@ -8,6 +8,8 @@ import { usePathname } from 'next/navigation';
 import { pageTitles } from '../lib/pageTitles';
 import ThemeSwitch from "./ThemeSwitch";
 import { useSidebar } from "../context/SidebarContext";
+import { useMemo } from "react";
+import { projects } from "../mockData";
 
 
 const Navbar = () => {
@@ -15,9 +17,41 @@ const Navbar = () => {
   const { isSidebarOpen, toggleSidebar, closeSidebar } = useSidebar();
 
   const pathname = usePathname()
-  const meta = pageTitles[pathname] || {title: 'Page', description: ''}
+
+  // const meta = pageTitles[pathname] || {title: 'Page', description: ''}
 
   // const title = pageTitles[cleanPath] || 'Page'
+
+  const meta = useMemo(() => {
+  if (pathname.startsWith('/storyboard/')) {
+    const id = pathname.split('/')[2];
+    const project = projects.find(p => p.id === id);
+    return {
+      title: project?.title || 'Storyboard',
+      description: 'Your Storyboard'
+    };
+  }
+
+  if (pathname.startsWith('/shotlist/')) {
+    const id = pathname.split('/')[2];
+    const project = projects.find(p => p.id === id);
+    return {
+      title: project?.title || 'Shotlist',
+      description: 'Your Shotlist'
+    };
+  }
+
+  if (pathname.startsWith('/screenplay/')) {
+    const id = pathname.split('/')[2];
+    const project = projects.find(p => p.id === id);
+    return {
+      title: project?.title || 'Screenplay',
+      description: 'Your Screenplay'
+    };
+  }
+
+  return pageTitles[pathname] || { title: 'Page', description: '' };
+}, [pathname]);
 
 
   return (
