@@ -25,8 +25,8 @@ export default function Sidebar() {
         </button>
         <nav className="space-y-2">
           <Link href="/" className='text-sm hover:bg-neutral-500 hover:text-white block p-2 pl-5'>My Projects</Link>
-          <Link href="/shotlist" className='text-sm hover:bg-neutral-500 hover:text-white block p-2 pl-5'>Shotlist</Link>
-          <Link href="/storyboard" className='text-sm hover:bg-neutral-500 hover:text-white block p-2 pl-5'>Storyboard</Link>
+          {/* <Link href="/shotlist" className='text-sm hover:bg-neutral-500 hover:text-white block p-2 pl-5'>Shotlist</Link> */}
+          {/* <Link href="/storyboard" className='text-sm hover:bg-neutral-500 hover:text-white block p-2 pl-5'>Storyboard</Link> */}
         </nav>
       </aside>
 
