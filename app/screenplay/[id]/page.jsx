@@ -14,12 +14,12 @@ const page = async (props) => {
   
         <div className="flex-1" />
         <div>
-          <button className="px-4 py-2 text-white rounded border w-fit">
+          <button className="px-4 py-2 text-white rounded border w-fit hover:bg-neutral-500 transition-all duration-500">
             Generate Screenplay
           </button>
         </div>
         <div className="flex-1 flex justify-end gap-4">
-          <Link href={`/shotlist/${id}`} className="flex whitespace-nowrap items-center gap-2 px-4 py-2 text-white rounded border w-fit">
+          <Link href={`/shotlist/${id}`} className="flex whitespace-nowrap items-center gap-2 px-4 py-2 text-white rounded border w-fit hover:bg-neutral-500 transition-all duration-500">
             Shotlist
             <span><IoIosArrowRoundForward /></span>
           </Link>

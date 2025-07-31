@@ -1,36 +1,48 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 // import { pageTitles } from '../lib/pageTitles'
 import Image from 'next/image'
 import { MdOutlineNavigateNext } from 'react-icons/md'
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Link from 'next/link';
+import ChooseStoryboard from '../../components/modals/ChooseStoryboard';
+import { useParams } from 'next/navigation';
+
+
 
 // export const metadata = {
 //     title: pageTitles['/storyboard'].title,
 //     description: pageTitles['/storyboard'].description
 // }
 
-const page = async ({params}) => {
+const page = () => {
 
-  const {id} = params;
+  const [open, setOpen] = useState(false);
+
+  const params = useParams();
+  const id = params?.id;
 
   return (
-    <section>
-        <nav className="flex justify-between items-center px-4 py-2">
+    <section className='relative'>
+        <nav className="flex justify-between items-start px-4 py-2">
           <div className="flex-1">
-            <Link href={`/screenplay/${id}`} className="flex whitespace-nowrap items-center gap-2 px-4 py-2 text-white  rounded border w-fit">
+            <Link href={`/screenplay/${id}`} className="flex whitespace-nowrap items-center gap-2 px-4 py-2 text-white  rounded border w-fit  hover:bg-neutral-500 transition-all duration-500">
               <span><IoIosArrowRoundBack /></span>
               Shotlist
             </Link>
           </div>
-          <div>
-            <button className="px-4 py-2 text-white rounded border w-fit">
+          <div className='flex flex-col items-center gap-3'>
+            <button className="px-4 py-2 text-white rounded border w-fit  hover:bg-neutral-500 transition-all duration-500">
               Generate Storyboard
+            </button>
+            <button onClick={() => setOpen(true)} className="px-4 py-2 text-white text-xs rounded border w-fit hover:bg-neutral-500 transition-all duration-500">
+              Change Art Style
             </button>
           </div>
           <div className="flex-1 flex justify-end gap-4">
-            <Link href={`/storyboard/${id}`} className="flex whitespace-nowrap items-center gap-2 px-4 py-2 text-white rounded border w-fit">
+            <Link href={`/storyboard/${id}`} className="flex whitespace-nowrap items-center gap-2 px-4 py-2 text-white rounded border w-fit hover:text-black hover:bg-neutral-500 transition-all duration-500">
               Animate
               <span><IoIosArrowRoundForward /></span>
             </Link>
@@ -54,8 +66,8 @@ const page = async ({params}) => {
               <button className='uppercase bg-neutral-300 text-sm font-medium p-2 hover:bg-neutral-400 cursor-pointer dark:text-slate-800'>upload</button>
           </div>
         </div>
-        
       </div>
+      <ChooseStoryboard open={open} onClose={() => setOpen(false)} />
     </section>
   )
 }
