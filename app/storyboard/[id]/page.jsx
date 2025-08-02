@@ -56,19 +56,49 @@ const page = () => {
           <div className='w-full relative'>
               <img src="/images/sketch.png" alt="" className='object-cover w-full h-full'/>
               <div className='absolute flex top-[50%] left-[50%] translate-x-[-50%] gap-3 opacity-0 group-hover:opacity-100'>
-                <button className='bg-neutral-600 p-2 rounded-sm hover:bg-neutral-400'>
-                  <FaEdit />
-                </button>
-                <button className='bg-neutral-600 p-2 rounded-sm hover:bg-neutral-400'>
-                  <IoReload />
-                </button>
-                <button className='bg-neutral-600 p-2 rounded-sm hover:bg-neutral-400'>
-                  <MdFileUpload />
-                </button>
+                <div className='group/edit relative'>
+                  <button className='bg-neutral-600 p-2 rounded-sm hover:bg-neutral-400'>
+                    <FaEdit />
+                  </button>
+                  <div class="absolute px-2 py-1 text-[9px] bottom-full mb-2 text-white bg-black rounded opacity-0 group-hover/edit:opacity-100 transition-opacity z-10 pointer-events-none">
+                    Edit
+                    <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45 z-[-1]"></div>
+                  </div>
+                </div>
+                <div  className='group/reload relative'>
+                  <button className='bg-neutral-600 p-2 rounded-sm hover:bg-neutral-400'>
+                    <IoReload />
+                  </button>
+                  <div class="absolute px-2 py-1 text-[9px] bottom-full mb-2 text-white bg-black rounded opacity-0 group-hover/reload:opacity-100 transition-opacity z-10 pointer-events-none">
+                    Reload
+                    <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45 z-[-1]"></div>
+                  </div>
+                </div>
+                <div className='group/upload relative'>
+                  <button className='bg-neutral-600 p-2 rounded-sm hover:bg-neutral-400'>
+                    <MdFileUpload />
+                  </button>
+                  <div class="absolute px-2 py-1 text-[9px] bottom-full mb-2 text-white bg-black rounded opacity-0 group-hover/upload:opacity-100 transition-opacity z-10 pointer-events-none">
+                    Reload
+                    <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45 z-[-1]"></div>
+                  </div>
+                </div>
               </div>
               <div className='flex absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-100%]  bg-neutral-600 rounded-sm opacity-0 group-hover:opacity-100'>
-                <button className='hover:bg-neutral-400 p-2'><MdOutlineContentCopy /></button>
-                <button className='hover:bg-neutral-400 p-2'><MdDeleteForever /></button>
+                <div className='group/duplicate relative'>
+                  <button className='hover:bg-neutral-400 p-2'><MdOutlineContentCopy /></button>
+                  <div class="absolute px-2 py-1 text-[9px] bottom-full mb-2 text-white bg-black rounded opacity-0 group-hover/duplicate:opacity-100 transition-opacity z-10 pointer-events-none">
+                    Duplicate
+                    <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45 z-[-1]"></div>
+                  </div>
+                </div>
+                <div className='group/delete relative'>
+                  <button className='hover:bg-neutral-400 p-2'><MdDeleteForever /></button>
+                  <div class="absolute px-2 py-1 text-[9px] bottom-full mb-2 text-white bg-black rounded opacity-0 group-hover/delete:opacity-100 transition-opacity z-10 pointer-events-none">
+                    Delete
+                    <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45 z-[-1]"></div>
+                  </div>
+                </div>
               </div>
           </div>
           <div className='p-2'>
