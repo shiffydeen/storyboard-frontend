@@ -40,7 +40,7 @@ const ChooseStoryboard = ({ open, onClose }) => {
           ))} */}
 
          
-          <button className="flex flex-col justify-center items-center border border-dashed border-gray-500 rounded-md h-36 hover:bg-gray-700">
+          <button className="flex flex-col justify-center items-center border border-dashed border-gray-500 rounded-md h-36 hover:bg-neutral-500">
             <span className="text-2xl">+</span>
             <span className="text-sm">Add your own<br />art style</span>
           </button>
@@ -49,10 +49,9 @@ const ChooseStoryboard = ({ open, onClose }) => {
         <div className="mt-6">
           <button
             onClick={() => {
-              console.log("Selected:", selected);
               onClose();
             }}
-            className="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-500 transition"
+            className="bg-neutral-500 text-white hover:bg-neutral-600 px-6 py-2 rounded transition"
           >
             SAVE CHANGES
           </button>

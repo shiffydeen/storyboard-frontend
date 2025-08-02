@@ -3,13 +3,14 @@
 import React, { useState } from 'react'
 // import { pageTitles } from '../lib/pageTitles'
 import Image from 'next/image'
-import { MdOutlineNavigateNext } from 'react-icons/md'
+import { MdDeleteForever, MdFileUpload, MdOutlineContentCopy, MdOutlineNavigateNext } from 'react-icons/md'
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Link from 'next/link';
 import ChooseStoryboard from '../../components/modals/ChooseStoryboard';
 import { useParams } from 'next/navigation';
-
+import { FaEdit } from 'react-icons/fa';
+import { IoReload } from 'react-icons/io5';
 
 
 // export const metadata = {
@@ -51,9 +52,24 @@ const page = () => {
     
       <div className='grid grid-cols-2 md:grid-cols-3 gap-3 mt-3  transition-all'>
           
-        <div className='shadow-2xl border border-neutral-400  rounded-sm justify-self-center'>
-          <div className='w-full'>
+        <div className='group shadow-2xl border border-neutral-400  rounded-sm justify-self-center'>
+          <div className='w-full relative'>
               <img src="/images/sketch.png" alt="" className='object-cover w-full h-full'/>
+              <div className='absolute flex top-[50%] left-[50%] translate-x-[-50%] gap-3 opacity-0 group-hover:opacity-100'>
+                <button className='bg-neutral-600 p-2 rounded-sm hover:bg-neutral-400'>
+                  <FaEdit />
+                </button>
+                <button className='bg-neutral-600 p-2 rounded-sm hover:bg-neutral-400'>
+                  <IoReload />
+                </button>
+                <button className='bg-neutral-600 p-2 rounded-sm hover:bg-neutral-400'>
+                  <MdFileUpload />
+                </button>
+              </div>
+              <div className='flex absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-100%]  bg-neutral-600 rounded-sm opacity-0 group-hover:opacity-100'>
+                <button className='hover:bg-neutral-400 p-2'><MdOutlineContentCopy /></button>
+                <button className='hover:bg-neutral-400 p-2'><MdDeleteForever /></button>
+              </div>
           </div>
           <div className='p-2'>
               <p className='font-bold'>Scene: 1 | Shot: 1</p>
