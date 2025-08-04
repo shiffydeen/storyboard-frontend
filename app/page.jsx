@@ -60,7 +60,7 @@ export default function Home() {
                   </Link>
                   <div class="absolute px-2 py-1 text-[9px] bottom-full mb-2 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
                     Shotlist
-                    <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45 z-[-1]"></div>
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45 z-[-1]"></div>
                   </div>
                 </div>
                 <div className="group relative">

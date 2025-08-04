@@ -1,13 +1,17 @@
+'use client'
+
 import Link from 'next/link'
+import { useParams } from 'next/navigation';
 import React from 'react'
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 
 
-const page = async (props) => {
+const page = () => {
 
-  const {id} = props.params;
+  const params = useParams();
+  const id = params?.id;
 
   return (
     <div>
