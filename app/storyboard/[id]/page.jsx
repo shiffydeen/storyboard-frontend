@@ -7,10 +7,11 @@ import { MdDeleteForever, MdFileUpload, MdOutlineContentCopy, MdOutlineNavigateN
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Link from 'next/link';
-import ChooseStoryboard from '../../components/modals/ChooseStoryboard';
+import ChooseStoryboard from '../../components/modals/ChooseStoryBoard.jsx';
 import { useParams } from 'next/navigation';
 import { FaEdit } from 'react-icons/fa';
 import { IoReload } from 'react-icons/io5';
+
 
 
 // export const metadata = {
